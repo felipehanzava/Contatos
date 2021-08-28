@@ -43,6 +43,7 @@ class HelperDB (
     }
 
 
+    @SuppressLint("Range")
     fun buscarContatos(busca: String, idBuscaPorID: Boolean = false) : List<ContatosVO>{
         val db = readableDatabase ?: return mutableListOf()
         var lista = mutableListOf<ContatosVO>()
