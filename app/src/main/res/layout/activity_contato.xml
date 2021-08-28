@@ -62,7 +62,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnSalvarConato"
+                android:id="@+id/btnSalvarContato"
                 android:text="Salvar contato"
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"

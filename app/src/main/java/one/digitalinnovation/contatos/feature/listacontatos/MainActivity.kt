@@ -1,5 +1,6 @@
 package one.digitalinnovation.contatos.feature.listacontatos
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -18,9 +19,9 @@ class MainActivity : BaseActivity() {
     private var adapter: ContatoAdapter? = null
 
     override  fun onCreate(salvedInstanceState: Bundle?){
-        super.onCreate(savedInstanceState)
+        super.onCreate(salvedInstanceState)
         setContentView(R.layout.activity_main)
-        setupToolBar(toolBar = "Lista de contatos", false)
+        setupToolBar(toolBar, "Lista de contatos",false)
         setupListView()
         setupOnClicks()
     }
@@ -71,4 +72,3 @@ class MainActivity : BaseActivity() {
 
 }
 
-}

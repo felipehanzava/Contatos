@@ -2,8 +2,12 @@ package one.digitalinnovation.contatos.feature.listacontatos.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import one.digitalinnovation.contatos.feature.listacontatos.model.ContatosVO
+import kotlinx.android.synthetic.main.item_contato.view.*
+import one.digitalinnovation.contatos.R
 
 class ContatoAdapter (
     private val context: Context,
@@ -11,7 +15,7 @@ class ContatoAdapter (
     private val onClick: ((Int) -> Unit)
     ): RecyclerView.Adapter<ContatoViewHolder>(){
        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContatoViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_contato, parente, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_contato, parent, false)
         return ContatoViewHolder(view)
 
     }
@@ -28,3 +32,5 @@ class ContatoAdapter (
 
 
 }
+
+class ContatoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
